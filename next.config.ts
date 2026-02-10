@@ -5,8 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // MAKE SURE THIS MATCHES YOUR GITHUB REPO NAME EXACTLY
-  // If your repo URL is github.com/kjeurolfan/Portfolio -> use '/Portfolio'
+  // Capital 'P' to match your Browser URL and Image paths
   basePath: '/Portfolio', 
   assetPrefix: '/Portfolio',
 };
