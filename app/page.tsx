@@ -21,7 +21,7 @@ export default function Portfolio() {
         <header className="hero">
           <div className="profile-container">
             <div className="profile-ring">
-              <img src="/1x1ID.jpg" className="profile-pic" alt="Ken Justine" />
+              <img src="/Portfolio/1x1ID.jpg" className="profile-pic" alt="Ken Justine" />
             </div>
           </div>
           <h1 className="hero-name">Ken Justine P. Eurolfan</h1>
@@ -103,14 +103,14 @@ export default function Portfolio() {
             <div className="img-overlay">
               <span>View Certificate</span>
             </div>
-            <img src="/cert1.jpg" alt="Hackathon Certificate" />
+            <img src="/Portfolio/cert1.jpg" alt="Hackathon Certificate" />
           </div>
         </div>
 
         {/* Certifications - Six Sigma */}
         <h2 className="section-label">Featured Certification</h2>
         <div className="glass-card highlight-card reverse-mobile">
-          <div className="highlight-media" onClick={() => setLightboxImg('/sixsigma.png')}>
+          <div className="highlight-media" onClick={() => setLightboxImg('/Portfolio/sixsigma.png')}>
             <div className="img-overlay">
               <span>View Credential</span>
             </div>
