@@ -56,7 +56,6 @@ export default function SideNav() {
           <button onClick={() => scrollTo('experience')} className={`nav-btn ${activeSection === 'experience' ? 'active' : ''}`}>Experience</button>
           <button onClick={() => scrollTo('certifications')} className={`nav-btn ${activeSection === 'certifications' ? 'active' : ''}`}>Certifications</button>
           <button onClick={() => scrollTo('projects')} className={`nav-btn ${activeSection === 'projects' ? 'active' : ''}`}>Projects</button>
-          <button onClick={() => scrollTo('github')} className={`nav-btn ${activeSection === 'github' ? 'active' : ''}`}>GitHub</button>
           <button onClick={() => scrollTo('education')} className={`nav-btn ${activeSection === 'education' ? 'active' : ''}`}>Education</button>
         </div>
       </nav>
