@@ -5,11 +5,13 @@ import CodeParticles from './components/CodeParticles';
 import AIPrompt from './components/AIPrompt';
 import SideNav from './components/SideNav';
 import { GitHubCalendar } from 'react-github-calendar';
+import Preloader from './components/Preloader';
 
 export default function Portfolio() {
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
   const [symposiumIndex, setSymposiumIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const symposiumCerts = [
     '/Portfolio/COLLEGE SYMPOSIUM CERTIFICATE 1.jpg',
@@ -31,8 +33,10 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="codeverse-wrapper">
-      <CodeParticles />
+    <>
+      {loading && <Preloader onComplete={() => setLoading(false)} />}
+      <div className={`codeverse-wrapper ${loading ? 'hide-content' : 'show-content'}`}>
+        <CodeParticles />
       <SideNav />
       
       <main className="main-content">
@@ -422,6 +426,18 @@ export default function Portfolio() {
       )}
 
       <style jsx global>{`
+        .hide-content {
+          opacity: 0;
+          height: 100vh;
+          overflow: hidden;
+          pointer-events: none;
+        }
+
+        .show-content {
+          opacity: 1;
+          transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         .codeverse-wrapper {
           min-height: 100vh;
           position: relative;
@@ -1249,6 +1265,7 @@ export default function Portfolio() {
           .inner-orbit .skill-node { transform: rotate(var(--angle)) translateY(-70px) rotate(calc(var(--angle) * -1)); }
         }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 }
